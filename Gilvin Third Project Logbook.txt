@@ -1,0 +1,45 @@
+
+- created SSH Key (VERY IMPORTANT in order to push commits). git is online for the project as of now.
+
+- Done doing Setting p views part 1
+
+ls
+cd
+git init
+git remote add origin [gitLink]
+git remote -v
+git add .
+git commit -m "First commit"
+git push origin master
+
+^git bash commands for uploading files to github. gitlink is SSH link not HTTPS since HTTPS key sucks ass.
+
+
+Feb 07: 
+
+- Setup project link in github, created first commit
+
+- Setup vue config in package json. 
+
+- Established vuejs environment in project file
+
+- Created first  "SPA" type landing pages
+
+Feb 08:
+
+- Created Layouts from app.js file
+
+- Learned about Persistent Layout, timer of current session using inertia and vue
+
+when importing shit, usage of directory address like '../../Layouts/MainLayout.vue'; is different depending on 
+which folder u are currently in. ../.. when in another folder, and './MainLayout.Vue when in the same folder? idk
+
+- ^Issue above is fixed using jsconfig, u can just sort of use @/ to locate stuff u u want to import
+
+- added await and assync on the const pages in app.js, idk about what the fuck it does since nothing changed but I'll play it safe and  do it anyway
+
+Feb 09:
+
+- stuck with this port conflict shit. Xampp conflicts with docker desktop adminer and creates errors.
+
+- Reinstall php tomorrow. You're done. We lost today xd
