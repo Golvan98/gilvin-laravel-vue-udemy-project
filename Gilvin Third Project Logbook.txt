@@ -43,3 +43,9 @@ Feb 09:
 - stuck with this port conflict shit. Xampp conflicts with docker desktop adminer and creates errors.
 
 - Reinstall php tomorrow. You're done. We lost today xd
+
+Feb 15:
+
+- Solved the route problems, uninstalled xampp to remove port conflicts.
+
+- Stuck with the extension PDO error in php. Will try tomorrow.
