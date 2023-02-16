@@ -49,3 +49,10 @@ Feb 15:
 - Solved the route problems, uninstalled xampp to remove port conflicts.
 
 - Stuck with the extension PDO error in php. Will try tomorrow.
+
+Feb 16:
+
+- Solved the extenion pdo error problem, php.ini created by the php installation folder is not recognized, 
+gotta make one on ur own. what a bummer, those cunts
+
+- Added first migration table, and feature such as dropColumn. fought well today. gg.
