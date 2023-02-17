@@ -56,3 +56,7 @@ Feb 16:
 gotta make one on ur own. what a bummer, those cunts
 
 - Added first migration table, and feature such as dropColumn. fought well today. gg.
+
+Feb 17:
+
+- Database factory/seeders
