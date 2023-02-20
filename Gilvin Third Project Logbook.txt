@@ -65,3 +65,10 @@ Fab 20:
 
 - where() in DB Queries combines parameters with the AND operator, which means 
 it must be this and that, not this OR that
+
+- Created resource controlls and limited with ->Only['index' , 'show'] feature.
+
+- Docker port someohw conflicts with git ports (unable to push commits while docker is connected)
+
+- Link->controller->web is somewhat lacking, revisit v-for and route section tomorrow. A battle lost is
+not a war lost = ) gj gj gl

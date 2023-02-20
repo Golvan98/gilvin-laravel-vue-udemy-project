@@ -52,10 +52,10 @@ class ListingController extends Controller
      */
     public function show(Listing $listing)
     {
-        return inertia('Listing/Show',
+        return inertia('Listing/show',
 
         [ 
-            'listings' => Listing::find($listing)      
+            'listing' => $listing     
         ]
 
       );
