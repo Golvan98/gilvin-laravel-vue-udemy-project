@@ -60,3 +60,8 @@ gotta make one on ur own. what a bummer, those cunts
 Feb 17:
 
 - Database factory/seeders
+
+Fab 20:
+
+- where() in DB Queries combines parameters with the AND operator, which means 
+it must be this and that, not this OR that
