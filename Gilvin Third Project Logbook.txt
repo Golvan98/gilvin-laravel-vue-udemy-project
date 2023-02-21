@@ -79,3 +79,5 @@ Feb 21: Resuming controller->route issue
 now you gotta copy ` everytime u refer variables in hrefs. !!!IMPORTANT!!
 
 - Added components folder in js folders
+
+- Inertia issue. Syntax is fucking new and not the same again, will try tomorrow. Sigh. Redo forms section
