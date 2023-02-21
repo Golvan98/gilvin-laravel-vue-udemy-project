@@ -2,9 +2,9 @@
 
         <div v-for="listing in listings" :key="listing.id">
 
-                <Link :href="'/listing/${listing.id}'">
+                <Link :href="`/listing/${listing.id}`">
 
-                {{ listing.city }} , {{ listing.street }} for ${{  listing.price }}
+                        <ListingAddress :listing="listing"/>
 
                  </Link>
                 
@@ -14,6 +14,7 @@
         
         <script setup>
         
+        import ListingAddress from '@/Components/ListingAddress.vue';
         import {Link} from '@inertiajs/vue3'
 
         defineProps({ 

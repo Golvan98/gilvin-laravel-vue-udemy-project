@@ -72,3 +72,10 @@ it must be this and that, not this OR that
 
 - Link->controller->web is somewhat lacking, revisit v-for and route section tomorrow. A battle lost is
 not a war lost = ) gj gj gl
+
+Feb 21: Resuming controller->route issue
+
+- Fixed the issue, its the--> ' <-- that shit. vue prefers --> ` <-- instead of --> ' <-- this
+now you gotta copy ` everytime u refer variables in hrefs. !!!IMPORTANT!!
+
+- Added components folder in js folders
