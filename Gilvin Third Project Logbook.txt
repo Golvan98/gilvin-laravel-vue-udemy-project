@@ -81,3 +81,8 @@ now you gotta copy ` everytime u refer variables in hrefs. !!!IMPORTANT!!
 - Added components folder in js folders
 
 - Inertia issue. Syntax is fucking new and not the same again, will try tomorrow. Sigh. Redo forms section
+
+Feb 21: Resuming Syntax issue in form.post inertia
+
+- Figured out the problem, it's those extra syntax PhpStorm indicator creates in the OL Course. BEWARE of those shts
+
