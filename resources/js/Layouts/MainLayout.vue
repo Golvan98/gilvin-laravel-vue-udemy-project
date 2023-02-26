@@ -3,8 +3,8 @@
 <div><Link href="/"> Index Page </Link> </div>
 <div><Link href="/hello"> Show Page </Link> </div>
 
-<div v-if="$page.props.flash.success" class="success">
-            {{  $page.props.flash.success }}
+<div v-if="$page.props.flash.message" class="message">
+            {{  $page.props.flash.message }}
 </div>
 
 
@@ -16,9 +16,10 @@ otenyawa
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
+import { usePage } from '@inertiajs/vue3'
 import { ref } from 'vue'
 
-import { usePage } from '@inertiajs/inertia-vue3';
+
 
 const page = usePage()
 
@@ -28,7 +29,7 @@ setInterval(() => timer.value++, 1000) */
 </script>
 
 <style scoped>
-    .success{
+    .message{
         background-color: green;
         color:white;
     }

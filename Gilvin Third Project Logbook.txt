@@ -89,3 +89,11 @@ Feb 22: Resuming Syntax issue in form.post inertia
 Feb 23:
 
 - flash message not showing, piece of shit using different snytax again =) wcyd
+
+Feb 26:
+
+- in centrio's starbucks shit lol
+
+- confirmed the create button using vue form works, but flash message unsuccessful.
+
+- failed at debugging flash message, will try more options next time
