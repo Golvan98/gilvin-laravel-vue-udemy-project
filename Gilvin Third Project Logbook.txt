@@ -97,3 +97,8 @@ Feb 26:
 - confirmed the create button using vue form works, but flash message unsuccessful.
 
 - failed at debugging flash message, will try more options next time
+
+Feb 28:
+
+- fixed the flash message, turns out you don't need the $ prefix and .value syntax anymore. these assholes
+are never really accurate with their syntax. Sigh 

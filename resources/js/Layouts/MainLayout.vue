@@ -1,10 +1,10 @@
 <template>
 
-<div><Link href="/"> Index Page </Link> </div>
+<div><Link href="/"> Index Page </Link> &nbsp;</div>
 <div><Link href="/hello"> Show Page </Link> </div>
 
-<div v-if="$page.props.flash.message" class="message">
-            {{  $page.props.flash.message }}
+<div v-if="flashSuccess" class="success">
+        {{ flashSuccess }}
 </div>
 
 
@@ -15,13 +15,17 @@ otenyawa
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
-import { usePage } from '@inertiajs/vue3'
+import { computed } from 'vue'
+import { Link, usePage } from '@inertiajs/vue3'
 import { ref } from 'vue'
+
+const flashSuccess = computed(() => page.props.flash.success)
 
 
 
 const page = usePage()
+
+
 
 /* const timer = ref(0) <div> Current Session {{ timer }}</div>
 setInterval(() => timer.value++, 1000) */
@@ -29,9 +33,9 @@ setInterval(() => timer.value++, 1000) */
 </script>
 
 <style scoped>
-    .message{
+    .success{
         background-color: green;
-        color:white;
+        color:black;
     }
 
 </style>

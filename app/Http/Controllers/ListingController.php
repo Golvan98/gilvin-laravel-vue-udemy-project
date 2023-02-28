@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use Inertia\Middleware;
+use Inertia\Inertia;
+use App\Http\Middleware\HandleInertiaRequests;  
 
 class ListingController extends Controller
 {
