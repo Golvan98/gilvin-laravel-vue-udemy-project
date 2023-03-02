@@ -107,3 +107,4 @@ March 02:
 
 - Backend and Frontend Form Validation Complete
 - First attempt at Edit Forms using vue/inertia
+- Finished Edit Form using vue/inertia
