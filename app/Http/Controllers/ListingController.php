@@ -77,15 +77,15 @@ class ListingController extends Controller
       );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(Listing $listing)
     {
-        //
+        return inertia('Listing/Edit',
+
+        [ 
+            'listing' => $listing     
+        ]
+
+      );
     }
 
     /**
@@ -95,9 +95,20 @@ class ListingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Listing $listing)
     {
-        //
+        $listing->update($request->validate([ 
+            'beds' => 'required|integer|min:0|max:20',
+            'baths' => 'required|integer|min:0|max:20',
+            'area' => 'required|integer|min:0|max:20',
+            'city' => 'required', 
+            'code' => 'required',
+            'street' => 'required',
+            'street_nr' => 'required|integer|min:0|max:1000',
+            'price' => 'required|integer|min:0|max:2000000',
+        ]));
+
+        return redirect()->route('listing.index')->with('success', 'Listing was edited');
     }
 
     /**

@@ -102,3 +102,8 @@ Feb 28:
 
 - fixed the flash message, turns out you don't need the $ prefix and .value syntax anymore. these assholes
 are never really accurate with their syntax. Sigh 
+
+March 02:
+
+- Backend and Frontend Form Validation Complete
+- First attempt at Edit Forms using vue/inertia
