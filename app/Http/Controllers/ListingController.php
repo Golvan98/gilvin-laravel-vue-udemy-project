@@ -7,6 +7,7 @@ use App\Models\Listing;
 use Inertia\Middleware;
 use Inertia\Inertia;
 use App\Http\Middleware\HandleInertiaRequests;  
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class ListingController extends Controller
 {
@@ -39,13 +40,22 @@ class ListingController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
+     *2
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Listing::create($request->all());
+        Listing::create($request->validate([ 
+            'beds' => 'required|integer|min:0|max:20',
+            'baths' => 'required|integer|min:0|max:20',
+            'area' => 'required|integer|min:0|max:20',
+            'city' => 'required', 
+            'code' => 'required',
+            'street' => 'required',
+            'street_nr' => 'required|integer|min:0|max:1000',
+            'price' => 'required|integer|min:0|max:2000000',
+        ]));
 
         return redirect()->route('listing.create')->with('success', 'Listing was created');
     }
