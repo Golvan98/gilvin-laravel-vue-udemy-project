@@ -93,7 +93,7 @@
             street:props.listing.street
                           })
  
-     const update = () => form.put(`/listing/${props.listing.id}`)   
+     const update = () => form.put(route('listing.update', {listing: props.listing.id}))   
      
  
    </script>

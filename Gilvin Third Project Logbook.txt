@@ -113,3 +113,11 @@ March 07:
 
 - Working Delete but no flash message yet
 - Debugging flash message failed, will try again tomorrow. sadge.
+
+March 09:
+
+- switched coding hours to morning around 9-12
+- installed ziggy, solved issue where it cannot launch composer require tightenco/ziggy via --ignore-platform-req=ext-fileinfo
+- ^issue above is I'm not entirely sure if it's working yet. these dependencies... zz
+- managed to make ziggy work somehow. Flash message bug is still persistent tho. 
+- href links are now in route names. will do a commit now

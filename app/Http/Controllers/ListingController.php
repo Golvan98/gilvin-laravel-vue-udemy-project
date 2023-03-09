@@ -121,6 +121,8 @@ class ListingController extends Controller
     {
         $listing->delete();
 
-        return redirect()->route('listing.index')->with('success', 'Listing was edited');
+        return redirect()->route('listing.index')->with('success', 'Listing was deleted');
     }
+
+
 }
