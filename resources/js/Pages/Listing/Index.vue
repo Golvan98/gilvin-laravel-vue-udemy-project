@@ -21,17 +21,12 @@
     </template>
         
         <script setup>
-        
-        import ListingAddress from '@/Components/ListingAddress.vue';
-        import {Link} from '@inertiajs/vue3'    
-       import { reactive } from 'vue'
-       import { useForm } from '@inertiajs/inertia-vue3'
-        defineProps({ 
-            listings: Object,
-                   })
-        
-        
-        </script>
+import {Link} from '@inertiajs/inertia-vue3'
+import ListingAddress from '@/Components/ListingAddress.vue'
+defineProps({
+  listings: Array,
+})
+</script>
        <style scoped>
        .success{
            background-color: green;
