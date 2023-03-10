@@ -11,3 +11,5 @@ class Listing extends Model
 
     protected $fillable = ['city', 'baths',  'area', 'street', 'street_nr' , 'price', 'beds', 'code'];
 }
+
+?>

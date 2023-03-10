@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Listing;
 use Inertia\Middleware;
 use Inertia\Inertia;
-use App\Http\Middleware\HandleInertiaRequests;  
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use App\Http\Middleware\HandleInertiaRequests;  
 
 class ListingController extends Controller
 {
@@ -57,7 +57,7 @@ class ListingController extends Controller
             'price' => 'required|integer|min:0|max:2000000',
         ]));
 
-        return redirect()->route('listing.create')->with('success', 'Listing was created');
+        return redirect()->route('listing.index')->with('success', 'Listing was created');
     }
 
     /**
@@ -88,13 +88,7 @@ class ListingController extends Controller
       );
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Listing $listing)
     {
         $listing->update($request->validate([ 
@@ -108,21 +102,18 @@ class ListingController extends Controller
             'price' => 'required|integer|min:0|max:2000000',
         ]));
 
-        return redirect()->route('listing.index')->with('success', 'Listing was edited');
+        return redirect()->route('listing.index')->with('success', 'Listing EDITED');
+        
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Listing $listing)
     {
+
+        
         $listing->delete();
-
-        return redirect()->route('listing.index')->with('success', 'Listing was deleted');
+        
+        return redirect()->route('listing.index')->with('success', 'Listing DELETED');
     }
-
-
+    
 }

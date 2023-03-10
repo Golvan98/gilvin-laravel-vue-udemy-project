@@ -37,6 +37,9 @@ setInterval(() => timer.value++, 1000) */
         background-color: green;
         color:black;
     }
-
+    .error{
+        background-color: red;
+        color:black;
+    }
 </style>
 

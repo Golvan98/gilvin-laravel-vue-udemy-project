@@ -121,3 +121,8 @@ March 09:
 - ^issue above is I'm not entirely sure if it's working yet. these dependencies... zz
 - managed to make ziggy work somehow. Flash message bug is still persistent tho. 
 - href links are now in route names. will do a commit now
+- flash message still bugged. idk. best move on maybe there are better ways to do this
+
+March 10:
+- tried to solve that delete shit, still nada.
+- Configured tailwind into the project. yey.

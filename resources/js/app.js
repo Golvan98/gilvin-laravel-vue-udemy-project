@@ -3,6 +3,7 @@ import { createInertiaApp } from '@inertiajs/vue3'
 import { InertiaProgress } from "@inertiajs/progress";
 import MainLayout from '@/Layouts/MainLayout.vue'
 import {ZiggyVue} from 'ziggy'
+import '../css/app.css'
 
 createInertiaApp({
   resolve: async name => {
