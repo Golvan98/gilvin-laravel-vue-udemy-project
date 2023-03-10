@@ -126,3 +126,7 @@ March 09:
 March 10:
 - tried to solve that delete shit, still nada.
 - Configured tailwind into the project. yey.
+- fixed the Fucking flash bug. It's '@inertiajs/inertia-vue3' NOT THIS import {Link} from '@inertiajs/vue3' . 
+as to why it works on edit/create and not on delete, idk. wtf.
+- Cleaned up some code. Better to go to github and copy what's what if you're having problems, you'll figure
+what's wrong faster anyways. U did good, ziggy installation problem was worse and u solved it faster than this

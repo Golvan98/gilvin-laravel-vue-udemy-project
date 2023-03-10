@@ -21,18 +21,12 @@
     </template>
         
         <script setup>
-import {Link} from '@inertiajs/inertia-vue3'
-import ListingAddress from '@/Components/ListingAddress.vue'
-defineProps({
-  listings: Array,
-})
-</script>
-       <style scoped>
-       .success{
-           background-color: green;
-           color:black;
-           padding: 2px;
-           margin-right: 2em;
-       }
-
-   </style>
+        
+        import ListingAddress from '@/Components/ListingAddress.vue';
+        import {Link} from '@inertiajs/inertia-vue3'    
+        defineProps({ 
+            listings: Array,
+                   })
+        </script>
+        
+       
