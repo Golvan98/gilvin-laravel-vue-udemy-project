@@ -4,7 +4,7 @@
               <Box v-for="listing in listings" :key="listing.id">
 
               <Link :href="route('listing.show', {listing: listing.id})">
-
+                     <ListingSpace :listing="listing"/>
                      <ListingAddress :listing="listing"/>
 
               </Link>
@@ -24,9 +24,11 @@
         
         <script setup>
         
-        import ListingAddress from '@/Components/ListingAddress.vue';
+        import ListingAddress from '@/Components/ListingAddress.vue'
         import {Link} from '@inertiajs/inertia-vue3'    
         import Box from '@/Components/UI/Box.vue'
+        import ListingSpace from '@/Components/UI/ListingSpace.vue'
+        
         defineProps({ 
             listings: Array,
                    })

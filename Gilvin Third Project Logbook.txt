@@ -133,3 +133,6 @@ what's wrong faster anyways. U did good, ziggy installation problem was worse an
 
 March 15:
 - Grids using vue and tailwind
+- <span> doesnt take a whole  element unlike div
+- used span as a sort of header and inserted it on top of the listings UI
+- to use only 1 root element (div) to pass classes onto vues, otherwise vue will ignore it
