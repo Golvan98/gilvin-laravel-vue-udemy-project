@@ -140,3 +140,4 @@ March 15:
 
 March 21:
 - styled show page using div class box and template
+- styed form using tailwind
