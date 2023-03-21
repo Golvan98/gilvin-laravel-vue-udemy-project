@@ -137,3 +137,6 @@ March 15:
 - used span as a sort of header and inserted it on top of the listings UI
 - to use only 1 root element (div) to pass CSS classes onto component/vues, otherwise vue will ignore it
 - added Price component that converts currency from ComputedProperties using localeString function
+
+March 21:
+- styled show page using div class box and template
