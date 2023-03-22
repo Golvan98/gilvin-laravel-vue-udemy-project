@@ -144,3 +144,5 @@ March 21:
 
 March 22:
 - directives @apply for repetitive classes in tailwind
+- Progress bar done but it was built in already, idk when I added this, might have came with the package
+of all the other npm shits I did.
