@@ -10,7 +10,7 @@
           <Link :href="route('listing.index')">LaraZillow</Link>
         </div>
         <div>
-          <Link :href="route('listing.create')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md">+ New Listing</Link>
+          <Link :href="route('listing.create')" class="primary-btn">+ New Listing</Link>
         </div>
       </nav>
     </div>

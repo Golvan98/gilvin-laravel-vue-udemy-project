@@ -141,3 +141,6 @@ March 15:
 March 21:
 - styled show page using div class box and template
 - styed form using tailwind
+
+March 22:
+- directives @apply for repetitive classes in tailwind
