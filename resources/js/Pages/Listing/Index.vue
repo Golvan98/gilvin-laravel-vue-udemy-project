@@ -1,9 +1,7 @@
 <template>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-              <Listing v-for="listing in listings" :key="listing.id" :listing="listing" >
-
-              </Listing>
+              <Listing v-for="listing in listings" :key="listing.id" :listing="listing"/>
         </div>
     
 </template>
@@ -12,7 +10,7 @@
         
         
         import Listing from '@/Pages/Listing/Components/Listing.vue'
-        import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'
+       
         defineProps({ 
             listings: Array,
                    })
