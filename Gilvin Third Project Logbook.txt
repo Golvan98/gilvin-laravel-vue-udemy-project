@@ -149,3 +149,6 @@ of all the other npm shits I did.
 - directive for error messages created
 - UI for range type of input
 - working calculator logic for price per monthy/interest payment
+
+March 23:
+- created a reusable logic for useMonthlyPayment
