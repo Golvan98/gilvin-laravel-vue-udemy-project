@@ -152,3 +152,4 @@ of all the other npm shits I did.
 
 March 23:
 - created a reusable logic for useMonthlyPayment
+- tried to use useMonthlyPayment in index page, doesnt work. another syntax issue. zz

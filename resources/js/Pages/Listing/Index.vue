@@ -12,7 +12,7 @@
         
         
         import Listing from '@/Pages/Listing/Components/Listing.vue'
-        
+        import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'
         defineProps({ 
             listings: Array,
                    })

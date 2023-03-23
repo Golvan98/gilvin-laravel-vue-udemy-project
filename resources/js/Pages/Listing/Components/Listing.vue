@@ -7,7 +7,7 @@
     <div class="flex items-center gap-1">
         <Price :price="listing.price"/>
         <div class="text-xs text-gray-500">
-            <Price :price="400" /> pm
+            <Price :price="monthlyPayment" /> pm
         </div>
     </div>
 
@@ -37,8 +37,12 @@ import {Link} from '@inertiajs/inertia-vue3'
 import Box from '@/Components/UI/Box.vue'
 import ListingSpace from '@/Components/UI/ListingSpace.vue'
 import Price from '@/Components/UI/Price.vue'
+import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
 
-defineProps({ 
+const props = defineProps({ 
     listing: Object,
            })
+
+const {monthlyPayment} = useMonthlyPayment(props.listing.price , 2.5,  25)
+
 </script>
