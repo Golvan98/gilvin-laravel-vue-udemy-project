@@ -158,3 +158,6 @@ March 24:
 
 - added more composable formula(members) such as totalInterest and principal Paid to listing profile
 - added auth controller for login/register
+- added Login form
+- TAKE NOTE of script setups, form@submit.prevent="methodname(login)" and v-model in vue
+WHENEVER YOU USE FORMS

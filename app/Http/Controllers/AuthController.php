@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     public function create()
     {
-            return inerita('Auth/Login');
+            return inertia('Auth/Login');
     }
 
     public function store()
