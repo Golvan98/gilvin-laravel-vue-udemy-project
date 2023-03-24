@@ -161,3 +161,7 @@ March 24:
 - added Login form
 - TAKE NOTE of script setups, form@submit.prevent="methodname(login)" and v-model in vue
 WHENEVER YOU USE FORMS
+- TAKENOTE: session regenerate is important
+- TAKENOTE: sessions in PHP usually expires after 24mins of inactivity, but cookies and remember me options
+can make a user authenticated indefinitely
+- added login with Authentication logic in Auth Controller
