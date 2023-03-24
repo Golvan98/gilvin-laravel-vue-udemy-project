@@ -157,3 +157,4 @@ March 23:
 March 24:
 
 - added more composable formula(members) such as totalInterest and principal Paid to listing profile
+- added auth controller for login/register
