@@ -153,3 +153,7 @@ of all the other npm shits I did.
 March 23:
 - created a reusable logic for useMonthlyPayment
 - tried to use useMonthlyPayment in index page, doesnt work. another syntax issue. zz
+
+March 24:
+
+- added more composable formula(members) such as totalInterest and principal Paid to listing profile
