@@ -170,4 +170,7 @@ March 28:
 
 - added error messages after authentication process
 - TAKENOTE: u need const props = defineProps({ errors:Object}) since the syntax is now errors.email/password/username instead of form.errors.username
+- Added showing the current logged in user feature
+- TAKENOTE: current syntax for const variable = computed (() => page.props.user) AND IT IS NOT page.props.value.user as older versions suggest
+- added an if and else in the view where it shows sign in button for non-authenticated users and other features if user is authenticated
 

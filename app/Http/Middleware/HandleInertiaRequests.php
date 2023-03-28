@@ -7,6 +7,7 @@ use Inertia\Middleware;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -39,10 +40,16 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        Auth::user();
         return array_merge(parent::share($request), [
             'flash' => [
                 'success' => $request->session()->get('success'),
             ],
+            'user' => $request->user() ? [
+                'id' => $request->user()->id ,
+                'name' => $request->user()->name, 
+                'email' => $request->user()->email
+                ] : null 
         ]);
 
     }
