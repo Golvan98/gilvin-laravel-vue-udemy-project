@@ -172,5 +172,8 @@ March 28:
 - TAKENOTE: u need const props = defineProps({ errors:Object}) since the syntax is now errors.email/password/username instead of form.errors.username
 - Added showing the current logged in user feature
 - TAKENOTE: current syntax for const variable = computed (() => page.props.user) AND IT IS NOT page.props.value.user as older versions suggest
-- added an if and else in the view where it shows sign in button for non-authenticated users and other features if user is authenticated
+- added an if and else in the feature in MainLayout view where it shows sign in button for non-authenticated users and other features if user is authenticated
+- added logout feature for both frontend and backend. there's a weird bug where it still shows the buttons though
+- TAKENOTE: csrf is a protection one must have for every form to avoid easy attacks. If you're using inertia, this stuff is generated automatically whereas before 
+when you were using blade u had to put @csrf for every method u have.
 
