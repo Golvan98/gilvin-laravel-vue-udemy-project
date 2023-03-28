@@ -165,3 +165,9 @@ WHENEVER YOU USE FORMS
 - TAKENOTE: sessions in PHP usually expires after 24mins of inactivity, but cookies and remember me options
 can make a user authenticated indefinitely
 - added login with Authentication logic in Auth Controller
+
+March 28:
+
+- added error messages after authentication process
+- TAKENOTE: u need const props = defineProps({ errors:Object}) since the syntax is now errors.email/password/username instead of form.errors.username
+

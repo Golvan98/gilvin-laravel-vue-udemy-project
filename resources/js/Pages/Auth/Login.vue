@@ -7,13 +7,13 @@
         <div>
             <label for="email" class="label"> E-mail (username)</label>
             <input id="email" v-model="form.email" type="text" class="input"/>
-            <div class="input-error"> Potential errors </div>
+            <div v-if="errors.email" class="input-error">{{ errors.email }}</div>
         </div>
         
         <div class="mt-4">
             <label for="password" class="label"> Password </label>
             <input id="password" v-model="form.password" type="password" class="input"/>
-            <div class="input-error"> Potential errors </div>
+            <div v-if="errors.password" class="input-error">{{ errors.password }}</div>
         </div>
 
 
@@ -30,6 +30,8 @@
 
 <script setup>
 import { useForm } from '@inertiajs/inertia-vue3';
+
+const props = defineProps({ errors:Object})
 
 const form = useForm({
     email:null,

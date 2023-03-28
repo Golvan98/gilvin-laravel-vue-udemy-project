@@ -10,7 +10,7 @@ class IndexController extends Controller
     
     public function index()
     {
-    dd(Auth::user());  
+     
         return inertia('Index/Index',
 
                         [ 
