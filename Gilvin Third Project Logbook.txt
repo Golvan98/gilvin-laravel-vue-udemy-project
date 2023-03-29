@@ -177,3 +177,17 @@ March 28:
 - TAKENOTE: csrf is a protection one must have for every form to avoid easy attacks. If you're using inertia, this stuff is generated automatically whereas before 
 when you were using blade u had to put @csrf for every method u have.
 
+March 29:
+- Added middleware
+- TAKENOTE: middlewares can be added in controller like this
+ public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show');
+    }
+BUTTTTT I think it's much easier to add middlewares through in the routes in web.php like this
+
+Route::resource('listing' , ListingController::class)->only(['create', 'store', 'edit', 'update', 'destroy'])->middleware('auth');
+Route::resource('listing', ListingController::class)->except(['create', 'store', 'edit', 'update', 'destroy']);
+
+March 30:
+
