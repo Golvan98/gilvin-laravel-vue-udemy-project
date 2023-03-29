@@ -191,5 +191,19 @@ Route::resource('listing', ListingController::class)->except(['create', 'store',
 
 - added create form
 
+- added create controller & register function
+
+- TAKENOTE: created a mutator that hashes password for a user attribute. u do it like this
+protected function password(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value) => $value,
+            set: fn($value) => Hash::make($value)
+        );
+    }
+
+- TAKENOTE: function name should be camelcase of the kebab-cased attribute. say "user-name" as an attribute should be named "userName" as function name
+
+
 March 30:
 
