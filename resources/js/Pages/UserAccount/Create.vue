@@ -1,13 +1,19 @@
 <template>
 
-    <form @submit.prevent="login">
+    <form @submit.prevent="register">
     
         <div class="w-1/2 mx-auto">
     
-            <div>
-                <label for="email" class="label"> E-mail (username)</label>
+            <div class="mt-4">
+                <label for="email" class="label"> E-mail </label>
                 <input id="email" v-model="form.email" type="text" class="input"/>
                 <div v-if="errors.email" class="input-error">{{ errors.email }}</div>
+            </div>
+
+            <div class="mt-4">
+                <label for="name" class="label"> Name </label>
+                <input id="name" v-model="form.name" type="text" class="input"/>
+                <div v-if="errors.name" class="input-error">{{ errors.name }}</div>
             </div>
             
             <div class="mt-4">
@@ -15,10 +21,16 @@
                 <input id="password" v-model="form.password" type="password" class="input"/>
                 <div v-if="errors.password" class="input-error">{{ errors.password }}</div>
             </div>
+
+            <div class="mt-4">
+                <label for="password_confirmation" class="label"> Confirm Password </label>
+                <input id="password_confirmation" v-model="form.password_confirmation" type="password" class="input"/>
+                <div v-if="errors.password" class="input-error">{{ errors.password }}</div>
+            </div>
     
     
             <div>
-                <button class="btn-primary w-full" type="submit"> Submit </button>
+                <button class="primary-btn w-full mt-4" type="submit"> Create Account  </button>
             </div>
     
         </div>
@@ -34,10 +46,12 @@
     const props = defineProps({ errors:Object})
     
     const form = useForm({
+        name: null,
         email:null,
-        password: null
+        password: null,
+        password_confirmation: null
     })
     
-    const login = () => form.post(route('login.store'))
+    const register = () => form.post(route('login.store'))
     
     </script>
