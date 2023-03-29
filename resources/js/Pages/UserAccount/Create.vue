@@ -32,6 +32,13 @@
             <div>
                 <button class="primary-btn w-full mt-4" type="submit"> Create Account  </button>
             </div>
+
+            <div class="mt-2 text-center">
+            <Link :href="route('login')" class="text-sm text-gray-400"> 
+               Already have an account? login here 
+            </Link>
+            
+        </div>
     
         </div>
     
@@ -41,7 +48,7 @@
     </template>
     
     <script setup>
-    import { useForm } from '@inertiajs/inertia-vue3';
+    import { Link, useForm } from '@inertiajs/inertia-vue3';
     
     const props = defineProps({ errors:Object})
     

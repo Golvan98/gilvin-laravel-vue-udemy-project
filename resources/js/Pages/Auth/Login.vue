@@ -16,10 +16,17 @@
             <div v-if="errors.password" class="input-error">{{ errors.password }}</div>
         </div>
 
-
         <div>
-            <button class="btn-primary w-full" type="submit"> Submit </button>
+            <button class="btn-primary w-full" type="submit"> Login </button>
         </div>
+
+        <div class="mt-2 text-center">
+            <Link :href="route('user-account.create')" class="text-sm text-gray-400"> 
+                Need an account? click here 
+            </Link>
+            
+        </div>
+
 
     </div>
 
@@ -30,7 +37,7 @@
 
 <script setup>
 import { useForm } from '@inertiajs/inertia-vue3';
-
+import { Link } from '@inertiajs/vue3'
 const props = defineProps({ errors:Object})
 
 const form = useForm({
