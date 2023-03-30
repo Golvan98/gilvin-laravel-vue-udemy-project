@@ -210,3 +210,12 @@ protected function password(): Attribute
 March 30:
 - added relations to Listing/Users. HasMany and belongsTo
 - added a by_user_id attribute to listings table
+- TAKENOTE: there are many ways to connect data from 1 to the other and u tinker with them according to their relationship names in model. 
+
+For Ex. $listing10 = listing::find(10). U associate it to user 2 using $listing->owner()->associate($user2);
+
+Ex. for the other way around is $user2->listings()->save($listing10);
+
+Another Ex. is $listing10->by_user_id = 2;
+
+
