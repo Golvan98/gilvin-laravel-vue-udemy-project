@@ -205,6 +205,8 @@ protected function password(): Attribute
 - TAKENOTE: function name should be camelcase of the kebab-cased attribute. say "user-name" as an attribute should be named "userName" as function name
 
 - added Link ref UI for create and login route
+- added exemption to CSRF 24min timer for logout
 
 March 30:
-
+- added relations to Listing/Users. HasMany and belongsTo
+- added a by_user_id attribute to listings table
