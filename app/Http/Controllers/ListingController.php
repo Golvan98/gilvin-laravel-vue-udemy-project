@@ -9,6 +9,7 @@ use Inertia\Inertia;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Middleware\HandleInertiaRequests;  
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 
 class ListingController extends Controller
 {
@@ -27,9 +28,9 @@ class ListingController extends Controller
         return inertia('Listing/Index',
 
         [ 
-            'listings' => Listing::all()      
+            'listings' => Listing::orderByDesc('created_at')->paginate(10)   
         ]
-
+      
         );
     }
 
