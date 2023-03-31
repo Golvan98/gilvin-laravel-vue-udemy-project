@@ -8,13 +8,13 @@ use Inertia\Middleware;
 use Inertia\Inertia;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Middleware\HandleInertiaRequests;  
+use Illuminate\Support\Facades\Auth;
 
 class ListingController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth')->except('index', 'show');
+    public function __construct(){
+        $this->authorizeResource(Listing::class, 'listing');
     }
 
     /**
@@ -40,6 +40,7 @@ class ListingController extends Controller
      */
     public function create()
     {
+       // $this->authorize('create', Listing::class);
         return inertia('Listing/Create');
         //
     }
@@ -75,6 +76,12 @@ class ListingController extends Controller
      */
     public function show(Listing $listing)
     {
+       /* if(Auth::user()->cannot('view', $listing)){
+            abort(403);
+        } 
+       */
+
+       //$this->authorize('view', $listing);
         return inertia('Listing/Show',
 
         [ 

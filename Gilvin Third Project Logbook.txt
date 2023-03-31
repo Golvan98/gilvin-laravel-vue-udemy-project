@@ -221,4 +221,5 @@ Another Ex. is $listing10->by_user_id = 2;
 - found a login/logout inconsistency, and buttons are still showing after logout. must fix soon.
 - First Encounter with custom policies. will grind through it tomorrow. Great work Today gilvs
 
-
+March 31:
+- 
