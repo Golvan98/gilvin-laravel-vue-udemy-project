@@ -10,6 +10,20 @@ class ListingPolicy
 {
     use HandlesAuthorization;
 
+    public function before (?User $user, $ability)
+    {
+        /*if($user->is_admin && $ability === 'update'){
+            return true;
+        }
+        This only allows an admin to update as the $ability is only set to 'update', so delete is not authorized. Where as the snippet below allows other actions for the admin
+        */
+
+        if($user?->is_admin){
+            return true;
+        }
+        // the "?" is a null safe operator to check if user is null. it assures that accessing this property does not induce an error
+    }
+
     /**
      * Determine whether the user can view any models.
      *
@@ -54,7 +68,7 @@ class ListingPolicy
      */
     public function update(User $user, Listing $listing)
     {
-        return true;
+        return $user->id === $listing->by_user_id;
     }
 
     /**
@@ -66,7 +80,7 @@ class ListingPolicy
      */
     public function delete(User $user, Listing $listing)
     {
-        return true;
+        $user->id === $listing->by_user_id;
     }
 
     /**
@@ -78,7 +92,7 @@ class ListingPolicy
      */
     public function restore(User $user, Listing $listing)
     {
-        return true;
+        $user->id === $listing->by_user_id;
     }
 
     /**
@@ -90,6 +104,6 @@ class ListingPolicy
      */
     public function forceDelete(User $user, Listing $listing)
     {
-        return true;
+        return $user->id === $listing->by_user_id;
     }
 }

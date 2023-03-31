@@ -222,4 +222,8 @@ Another Ex. is $listing10->by_user_id = 2;
 - First Encounter with custom policies. will grind through it tomorrow. Great work Today gilvs
 
 March 31:
-- 
+- added policy, yet to understand it fully
+- added "?" before view Policies so it would allow guests to view certain pages
+- configured policy in which only the by_user_id can edit/delete/restore listings. doesnt work on delete tho idk why
+- TAKENOTE: $user->listings loads all the listings related to user. $user->listings() allows u to build queries like ->where('id' 1 yada yada) and you'd have to call the get() method
+in the end. just like what you did in ur Needs Assessment Survey project

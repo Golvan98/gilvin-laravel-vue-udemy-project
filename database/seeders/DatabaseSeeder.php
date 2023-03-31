@@ -19,15 +19,21 @@ class DatabaseSeeder extends Seeder
          \App\Models\User::factory()->create([
              'name' => 'Test User',
              'email' => 'test@example.com',
+             'is_admin' => true,
+             'password' => 'password'
          ]);
 
          \App\Models\User::factory()->create([
             'name' => '2nd Test User',
             'email' => 'SecondTest@example.com',
+            'password' => 'password'
         ]);
 
         \App\Models\Listing::factory(20)->create(
             ['by_user_id' => 1]
+        );
+        \App\Models\Listing::factory(20)->create(
+            ['by_user_id' => 2]
         );
     }
 }
