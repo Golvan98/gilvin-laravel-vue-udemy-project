@@ -235,4 +235,7 @@ April 6:
 
 - added filter UI, logic not yet integrated
 - added props in prepartion for filter logic, clear button is now working and props persist when page is refreshed April 06
+
+April 7:
 - Added a scopeMostRecent function in listing Models, TAKENOTE: u can kill this method for almost any custom function u created, say for example, ranking by price or by id => u make a function called ->LowestPrice() and sht
+- migrated filter backend algo to Models and created custom scope Functions in the Listing Models class
