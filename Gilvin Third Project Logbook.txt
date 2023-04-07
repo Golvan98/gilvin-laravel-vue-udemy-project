@@ -234,5 +234,6 @@ in the end. just like what you did in ur thesis project
 April 6:
 
 - added filter UI, logic not yet integrated
+- added props in prepartion for filter logic, clear button is now working and props persist when page is refreshed April 06
 
 - 
