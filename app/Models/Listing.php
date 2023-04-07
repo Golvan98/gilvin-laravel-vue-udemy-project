@@ -13,6 +13,12 @@ class Listing extends Model
 
     protected $fillable = ['city', 'baths',  'area', 'street', 'street_nr' , 'price', 'beds', 'code'];
 
+
+    public function scopeMostRecent($query)
+    {
+        return $query->orderByDesc('created_at');
+    }
+
     public function owner(): BelongsTo
     {
         return $this->belongsTo(
