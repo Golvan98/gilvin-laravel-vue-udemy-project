@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Builder;
 use App\Models\User;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+
 
 class Listing extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = ['city', 'baths',  'area', 'street', 'street_nr' , 'price', 'beds', 'code'];
 

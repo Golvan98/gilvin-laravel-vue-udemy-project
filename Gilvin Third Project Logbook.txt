@@ -246,5 +246,6 @@ May 3:
 - NOTE: remember to always specfy a key in v-fors
 - NOTE: Frontend part, u can specify if a screen is minimized like medium size by md:flex-row, this works as an "if(screensize=medium/small/large)" then it renders that part of the css only
 - added new format and preview/edit/delete buttons in Realtor/Index view
+- added softdeletes feature
 
 
