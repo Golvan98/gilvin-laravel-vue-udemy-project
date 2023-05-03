@@ -246,6 +246,6 @@ May 3:
 - NOTE: remember to always specfy a key in v-fors
 - NOTE: Frontend part, u can specify if a screen is minimized like medium size by md:flex-row, this works as an "if(screensize=medium/small/large)" then it renders that part of the css only
 - added new format and preview/edit/delete buttons in Realtor/Index view
-- added softdeletes feature
-
-
+- added softdeletes feature/migration
+- NOTE: if u sticked to the naming convention in ListingPolicy and Resource sht, they can be carried to into controllers , u just need to build a construct in the controller.
+- migrated a construct and policy from Listong to Realtor Controller that limits a user to be able to delete only the listings he/she created
