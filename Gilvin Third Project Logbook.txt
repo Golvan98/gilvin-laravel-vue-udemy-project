@@ -242,3 +242,9 @@ April 7:
 
 May 3:
 - came back from unsolicited 3 weeks break. 1st week was on overtime from the other job, the other 2 weeks i was sick. sadge.
+- Moved Realtor folder deeper into js/Pages folder, it was js/Realtor before, its default pathfinding directory is js/Pages, TIL.
+- NOTE: remember to always specfy a key in v-fors
+- NOTE: Frontend part, u can specify if a screen is minimized like medium size by md:flex-row, this works as an "if(screensize=medium/small/large)" then it renders that part of the css only
+- added new format and preview/edit/delete buttons in Realtor/Index view
+
+
