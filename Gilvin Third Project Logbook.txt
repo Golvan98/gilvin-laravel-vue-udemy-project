@@ -239,3 +239,6 @@ April 6:
 April 7:
 - Added a scopeMostRecent function in listing Models, TAKENOTE: u can kill this method for almost any custom function u created, say for example, ranking by price or by id => u make a function called ->LowestPrice() and sht
 - migrated filter backend algo to Models and created custom scope Functions in the Listing Models class
+
+May 3:
+- came back from unsolicited 3 weeks break. 1st week was on overtime from the other job, the other 2 weeks i was sick. sadge.
