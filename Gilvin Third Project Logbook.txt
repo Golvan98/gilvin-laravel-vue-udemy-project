@@ -249,3 +249,7 @@ May 3:
 - added softdeletes feature/migration
 - NOTE: if u sticked to the naming convention in ListingPolicy and Resource sht, they can be carried to into controllers , u just need to build a construct in the controller.
 - migrated a construct and policy from Listong to Realtor Controller that limits a user to be able to delete only the listings he/she created
+
+
+May 5:
+- added checkbox button filter for Deleted

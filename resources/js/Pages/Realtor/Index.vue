@@ -2,7 +2,7 @@
 
 <h1 class="text-3xl mb-4">  Your Listings </h1> 
 <section class="mb-4">
-    Filters
+    <RealtorFilters />
 </section>
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -35,6 +35,7 @@
 
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3';
+import RealtorFilters from './Index/Components/RealtorFilters.vue';
 import ListingAddress from '@/Components/ListingAddress.vue';
 import Price from '@/Components/UI/Price.vue';
 import Box from '@/Components/UI/Box.vue'
