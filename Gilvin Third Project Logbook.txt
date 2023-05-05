@@ -253,3 +253,7 @@ May 3:
 
 May 5:
 - added checkbox button filter for Deleted
+- added watcher function 
+- NOTE: when passing routes in watch, u import router, not inertia, 
+and origin of import is '@inertiajs/vue3' , not '@inertia/inertia'
+- NOTE: when importing a wrong/unused library in script, the page malfunctions entirely
