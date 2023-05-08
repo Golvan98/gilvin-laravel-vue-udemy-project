@@ -38,6 +38,9 @@ import { reactive, watch, computed } from 'vue';
 import { router } from '@inertiajs/vue3';
 import { debounce } from 'lodash'
 
+
+
+
 const sortLabels = {
  created_at: [
 	{
@@ -66,11 +69,15 @@ const sortLabels = {
 
 const sortOptions = computed( () =>sortLabels[filterForm.by])
 
+const props = defineProps({
+  filters: Object,
+})
+
 const filterForm = reactive({
-	deleted: false,
-	by: 'created_at',
-	order: 'desc'
-});
+  deleted: props.deleted ?? false,
+  by: props.by ?? 'created_at',
+  order: props.order ?? 'desc',
+})
 
 watch(
  filterForm, debounce( () => router.get(
