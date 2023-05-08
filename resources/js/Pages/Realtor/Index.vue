@@ -48,7 +48,7 @@ import Price from '@/Components/UI/Price.vue';
 import Pagination from '@/Components/UI/Pagination.vue'
 import Box from '@/Components/UI/Box.vue'
 defineProps({
-  listings: Object,
+  listings: Array,
   filters: Object,
 })
 

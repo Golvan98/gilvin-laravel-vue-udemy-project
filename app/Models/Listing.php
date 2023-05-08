@@ -17,7 +17,7 @@ class Listing extends Model
 
     protected $fillable = ['city', 'baths',  'area', 'street', 'street_nr' , 'price', 'beds', 'code'];
 
-    protected $sortable = ['price' , 'created_at'];
+    protected $sortable = ['price', 'created_at'];
 
     public function scopeMostRecent($query)
     {
@@ -49,9 +49,10 @@ class Listing extends Model
             fn ($query, $value) => $query->withTrashed()
         )->when(
             $filters['by'] ?? false,
-            fn($query, $value) => 
-            !in_array($value,$this->sortable) ? $query : 
-            $query->orderBy($value, $filters['order'] ?? 'desc')
+            fn ($query, $value) =>
+            !in_array($value, $this->sortable)
+                ? $query :
+                $query->orderBy($value, $filters['order'] ?? 'desc')
         );
     }
 

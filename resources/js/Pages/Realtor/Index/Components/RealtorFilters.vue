@@ -42,41 +42,37 @@ import { debounce } from 'lodash'
 
 
 const sortLabels = {
- created_at: [
-	{
-	label: 'latest',
-	value: 'desc',
-	},
-	{
-	label: 'Oldest',
-	value: 'asc'
-	},
-],
-
- price: [
-	{
-	label: 'Pricey',
-	value: 'desc',
-	},
-
-	{ 
-	label: 'Cheapest',
-	value: 'asc',
-	},
-	],
- 	 
+  created_at: [
+    {
+      label: 'Latest',
+      value: 'desc',
+    },
+    {
+      label: 'Oldest',
+      value: 'asc',
+    },
+  ],
+  price: [
+    {
+      label: 'Pricey',
+      value: 'desc',
+    },
+    {
+      label: 'Cheapest',
+      value: 'asc',
+    },
+  ],
 }
-
-const sortOptions = computed( () =>sortLabels[filterForm.by])
+const sortOptions = computed(() => sortLabels[filterForm.by])
 
 const props = defineProps({
   filters: Object,
 })
 
 const filterForm = reactive({
-  deleted: props.deleted ?? false,
-  by: props.by ?? 'created_at',
-  order: props.order ?? 'desc',
+  deleted: props.filters.deleted ?? false,
+  by: props.filters.by ?? 'created_at',
+  order: props.filters.order ?? 'desc',
 })
 
 watch(
