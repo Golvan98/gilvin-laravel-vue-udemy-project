@@ -262,4 +262,6 @@ and origin of import is '@inertiajs/vue3' , not '@inertia/inertia'
 - added backend part for filtering by attributes and setting constraints on which parts can be sorted
 
 May 8:
-- added filter, code copied associated frontend-backend, must review May 8
+- added filter, code copied associated frontend-backend, must review both backend and frontend May 8
+- added default filter values when entering page, kinda clunky due to version syntax changes tho. May 8
+- added pagination May 8
