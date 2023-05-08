@@ -265,5 +265,13 @@ May 8:
 - added filter, code copied associated frontend-backend, must review both backend and frontend May 8
 - added default filter values when entering page, kinda clunky due to version syntax changes tho. May 8
 - added pagination May 8
-- migrated backend of page routing and controllers from Listing to Realtor, this way some features
-like edit, create, delete is now exclusive for realtor/owner accounts May 8
+- migrated backend of page routing and controllers from Listing to Realtor, 
+this way some features like edit, create, delete is now exclusive for realtor/owner accounts May 8
+- NOTE: adding ":" like :class="{'border-dashed':listing.deleted_at}" is a conditional class, wherein 
+in this code snippet it applies dashed borders IF listing.delete_at is true
+- NOTE: adding ->withTrashed() in web.php routers enable u to include soft deleted objects in ur queries for show/edit/update
+named routes. u can also specify certain route names while calling it in web.php
+- NOTE: Route::prefix('enter prefix here') immediately adds the entered prefix into route names
+- added restore feature, delete filter is not working as intended, will debug next session
+
+

@@ -37,5 +37,6 @@ Route::prefix('realtor')
   ->name('realtor.')
   ->middleware('auth')
   ->group(function () {
-    Route::resource('listing', RealtorListingController::class)->only(['index', 'destroy', 'edit', 'update',  'create', 'store']);
+    Route::name('listing.restore')->put('listing/{listing}/restore', [RealtorListingController::class, 'restore'])->withTrashed();
+    Route::resource('listing', RealtorListingController::class)->only(['index', 'destroy', 'edit', 'update',  'create', 'store'])->withTrashed();
   });

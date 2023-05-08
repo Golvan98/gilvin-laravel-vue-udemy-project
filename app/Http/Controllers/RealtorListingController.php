@@ -69,26 +69,6 @@ class RealtorListingController extends Controller
         
     }
 
-
-
-    public function show(Listing $listing)
-    {
-       /* if(Auth::user()->cannot('view', $listing)){
-            abort(403);
-        } 
-       */
-
-       //$this->authorize('view', $listing);
-        return inertia('Listing/Show',
-
-        [ 
-            'listing' => $listing     
-        ]
-
-      );
-    }
-
-
     public function create()
     {
        // $this->authorize('create', Listing::class);
@@ -111,6 +91,13 @@ class RealtorListingController extends Controller
         ]));
 
         return redirect()->route('realtor.listing.index')->with('success', 'Listing was created');
+    }
+
+    public function restore(Listing $listing)
+    {
+        $listing->restore();
+        return redirect()->back()->with('success', 'listing restored');
+        
     }
 
     /**
