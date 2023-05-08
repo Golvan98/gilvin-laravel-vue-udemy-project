@@ -22,7 +22,7 @@
 
 
             <div class="flex items-center gap-1 text-gray-600 dark:text-gray-300 justify-between">  
-                <Link class="btn-outline text-xs font-medium"> Preview </Link>
+                <a class="btn-outline text-xs font-medium" :href="route('listing.show', { listing: listing.id})" target="_blank"> Preview </a>
                 <Link class="btn-outline text-xs font-medium"> Edit </Link>
                 <Link class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', {listing: listing.id})" as="button" method="delete"> Delete </Link>
             </div>
