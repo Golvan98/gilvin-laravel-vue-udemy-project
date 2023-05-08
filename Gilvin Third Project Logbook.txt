@@ -259,3 +259,7 @@ and origin of import is '@inertiajs/vue3' , not '@inertia/inertia'
 - NOTE: when importing a wrong/unused library in script, the page malfunctions entirely
 - added debounce feature
 - added a filter feature for deleted listings using softdeletequery "withTrashed()"
+- added backend part for filtering by attributes and setting constraints on which parts can be sorted
+
+May 8:
+- added filter, code copied associated frontend-backend, must review May 8
