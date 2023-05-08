@@ -265,3 +265,5 @@ May 8:
 - added filter, code copied associated frontend-backend, must review both backend and frontend May 8
 - added default filter values when entering page, kinda clunky due to version syntax changes tho. May 8
 - added pagination May 8
+- migrated backend of page routing and controllers from Listing to Realtor, this way some features
+like edit, create, delete is now exclusive for realtor/owner accounts May 8

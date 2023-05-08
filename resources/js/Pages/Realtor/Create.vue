@@ -85,17 +85,9 @@ defineProps({ errors: Object })
             beds:0, baths: 0, area:0, city:null, code:null, street_nr: null, price:0 , street:null 
                          })
 
-    const create = () => form.post(route('listing.store'))   
+    const create = () => form.post(route('realtor.listing.store'))   
     
 
   </script>
 
-  <style scoped>
-  label {
-    margin-right: 2em;
-  }
-  
-  div {
-    padding: 2px
-  }
-  </style>
+ 

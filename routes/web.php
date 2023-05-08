@@ -20,12 +20,10 @@ use Illuminate\Pagination\Paginator;
 
 
 Route::get('/' , [IndexController::class, 'index']);
-Route::get('/hello' , [IndexController::class, 'show'])->middleware('auth');
+Route::get('/hello' , [IndexController::class, 'show']);
 
 
-Route::resource('listing' , ListingController::class)->only(['create', 'store', 'edit', 'update', ])->middleware('auth');
-
-Route::resource('listing', ListingController::class)->except(['create', 'store', 'edit', 'update', 'destroy']);
+Route::resource('listing', ListingController::class)->only(['index', 'show']);
 
 
 
@@ -39,5 +37,5 @@ Route::prefix('realtor')
   ->name('realtor.')
   ->middleware('auth')
   ->group(function () {
-    Route::resource('listing', RealtorListingController::class)->only(['index', 'destroy']);
+    Route::resource('listing', RealtorListingController::class)->only(['index', 'destroy', 'edit', 'update',  'create', 'store']);
   });

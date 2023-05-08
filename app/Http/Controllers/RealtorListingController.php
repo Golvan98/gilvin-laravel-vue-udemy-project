@@ -39,4 +39,85 @@ class RealtorListingController extends Controller
         return redirect()->back()
             ->with('success', 'Listing was deleted!');
     }
+
+    public function edit(Listing $listing)
+    {
+        return inertia('Realtor/Edit',
+
+        [ 
+            'listing' => $listing     
+        ]
+
+      );
+    }
+
+
+    public function update(Request $request, Listing $listing)
+    {
+        $listing->update($request->validate([ 
+            'beds' => 'required|integer|min:0|max:20',
+            'baths' => 'required|integer|min:0|max:20',
+            'area' => 'required|integer|min:0|max:20',
+            'city' => 'required', 
+            'code' => 'required',
+            'street' => 'required',
+            'street_nr' => 'required|integer|min:0|max:1000',
+            'price' => 'required|integer|min:0|max:2000000',
+        ]));
+
+        return redirect()->route('realtor.listing.index')->with('success', 'Listing EDITED');
+        
+    }
+
+
+
+    public function show(Listing $listing)
+    {
+       /* if(Auth::user()->cannot('view', $listing)){
+            abort(403);
+        } 
+       */
+
+       //$this->authorize('view', $listing);
+        return inertia('Listing/Show',
+
+        [ 
+            'listing' => $listing     
+        ]
+
+      );
+    }
+
+
+    public function create()
+    {
+       // $this->authorize('create', Listing::class);
+        return inertia('Realtor/Create');
+        //
+    }
+
+    public function store(Request $request)
+    {
+        
+        $request->user()->listings()->create($request->validate([ 
+            'beds' => 'required|integer|min:0|max:20',
+            'baths' => 'required|integer|min:0|max:20',
+            'area' => 'required|integer|min:0|max:20',
+            'city' => 'required', 
+            'code' => 'required',
+            'street' => 'required',
+            'street_nr' => 'required|integer|min:0|max:1000',
+            'price' => 'required|integer|min:0|max:2000000',
+        ]));
+
+        return redirect()->route('realtor.listing.index')->with('success', 'Listing was created');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    
 }
