@@ -273,5 +273,8 @@ in this code snippet it applies dashed borders IF listing.delete_at is true
 named routes. u can also specify certain route names while calling it in web.php
 - NOTE: Route::prefix('enter prefix here') immediately adds the entered prefix into route names
 - added restore feature, delete filter is not working as intended, will debug next session
+- fixed the clunkiness of filters, all is working as intended. GGs! May 8
 
+May 11:
+- added ListingImage Model and migration for file upload functionality
 
