@@ -277,4 +277,6 @@ named routes. u can also specify certain route names while calling it in web.php
 
 May 11:
 - added ListingImage Model and migration for file upload functionality
+- linked public storage using php artisan storage link
+- fixed some syntax errors in Listing Model. Slacked off today. Will go for 5 vids next session
 
