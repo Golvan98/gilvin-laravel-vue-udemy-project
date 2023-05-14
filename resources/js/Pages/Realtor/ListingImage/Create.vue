@@ -8,6 +8,12 @@
                 <button type="submit" :disabled="!canUpload" class="btn-outline disabled:opacity-25 disabled:cursor-not-allowed">Upload</button>
                 <button type="reset" class="btn-outline" @click="reset">Reset</button>
             </section>
+
+            <div v-if="imageErrors.length" class="input-error">
+        <div v-for="(error, index) in imageErrors" :key="index">
+          {{ error }}
+        </div>
+      </div>
         </form>
 
     </Box>
@@ -50,6 +56,9 @@ Inertia.on('progress', (event) =>
 const form = useForm({
   images: [],
 })
+
+
+const imageErrors = computed(() => Object.values(form.errors))
 
 const canUpload = computed( () => form.images.length)
 

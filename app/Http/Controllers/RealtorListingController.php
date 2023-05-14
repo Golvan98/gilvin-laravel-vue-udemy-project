@@ -9,6 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Validation\ValidationException;
 use App\Http\Controllers\AuthController;
 use App\Models\Listing;
+use App\Models\ListingImage;
 use Illuminate\Pagination\Paginator;
 
 class RealtorListingController extends Controller
@@ -28,7 +29,7 @@ class RealtorListingController extends Controller
         
         return inertia('Realtor/Index', [
             'filters' => $filters, 
-            'listings' => Auth::user()->listings()->filter($filters)->paginate(5)->withQueryString() ]);
+            'listings' => Auth::user()->listings()->filter($filters)->withCount('images')->paginate(5)->withQueryString() ]);
         //->mostRecent()
     }
     

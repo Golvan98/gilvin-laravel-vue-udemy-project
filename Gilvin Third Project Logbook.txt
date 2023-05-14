@@ -289,3 +289,5 @@ May 14:
 - added progress bar but it doesn't work in my pc since it has been showing without using this code
 - added section below where it displays uploaded images, doesnt work for other pics tho idk why May 14
 - added delete listing image feature May 14
+- added showing uploaded images in show listing page May 14
+- added error code message, but it doesn't work even when copy pastied word for word. will debug next session May 14
