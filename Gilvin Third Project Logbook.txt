@@ -286,3 +286,6 @@ May 14:
 - Tweaked php.ini info again where I enabled fileinfo extension
 - added uploading multiple images feature for using vue May 14
 - added craptons of class in form input classes
+- added progress bar but it doesn't work in my pc since it has been showing without using this code
+- added section below where it displays uploaded images, doesnt work for other pics tho idk why May 14
+- added delete listing image feature May 14
