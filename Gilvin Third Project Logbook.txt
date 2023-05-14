@@ -282,4 +282,7 @@ May 11:
 
 May 14:
 - added Controller, links and views for ListingImage, syntax is a bit different to video due to different current version May 14
-
+- added backend part for uploading pictures, and is now working May 14
+- Tweaked php.ini info again where I enabled fileinfo extension
+- added uploading multiple images feature for using vue May 14
+- added craptons of class in form input classes
