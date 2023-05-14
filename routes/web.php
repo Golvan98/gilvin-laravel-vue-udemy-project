@@ -44,3 +44,7 @@ Route::prefix('realtor')
   });
 
   Route::resource('listing.image', RealtorListingImageController::class)->only(['store', 'create']);
+
+  Route::get('/phpinfo', function() {
+    phpinfo();
+});
