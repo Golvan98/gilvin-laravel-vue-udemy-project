@@ -3,6 +3,11 @@
 
       
         <Box class="md:col-span-7 flex items-center w-full"> 
+            <div v-if="listing.images.length" class="grid grid-cols-2 gap-1">
+             <img v-for="image in listing.images" :key="image.id"
+             :src="image.src"
+             />
+            </div>
            <div class="w-full text-center font-medium text-gray-500"> No images </div> 
         </Box>
 
