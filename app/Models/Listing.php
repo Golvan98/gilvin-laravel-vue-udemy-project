@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\ListingImage;
 
 
+
+
 class Listing extends Model
 {
     use HasFactory, SoftDeletes;

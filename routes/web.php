@@ -9,6 +9,9 @@ use App\Http\Controllers\UserAccountController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Pagination\Paginator;
 use App\Models\ListingImage;
+use App\Models\Listing;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
