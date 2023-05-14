@@ -280,3 +280,6 @@ May 11:
 - linked public storage using php artisan storage link
 - fixed some syntax errors in Listing Model. Slacked off today. Will go for 5 vids next session
 
+May 14:
+- added Controller, links and views for ListingImage, syntax is a bit different to video due to different current version May 14
+

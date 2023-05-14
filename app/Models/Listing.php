@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
+use App\Models\ListingImage;
 
 
 class Listing extends Model

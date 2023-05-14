@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Models\Listing;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-
+use App\Models\ListingImage;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
