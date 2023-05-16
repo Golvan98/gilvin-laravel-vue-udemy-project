@@ -291,4 +291,7 @@ May 14:
 - added delete listing image feature May 14
 - added showing uploaded images in show listing page May 14
 - added error code message, but it doesn't work even when copy pastied word for word. will debug next session May 14
-- added counter for # of images using model relationship and existing withCount() function
+- added counter for # of images using model relationship and existing withCount() function 
+
+May 16:
+- added migrations and model-relationships for Offers Feature

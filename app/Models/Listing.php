@@ -10,7 +10,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\ListingImage;
-
+use App\Models\Offer;
 
 
 
@@ -71,6 +71,12 @@ class Listing extends Model
     {
         return $this->hasMany(ListingImage::class);
     }
+
+    public function offers(): HasMany
+    {
+        return $this->hasMany(Offer::class, 'listing_id');
+    }
+
 }
 
 ?>

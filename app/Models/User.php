@@ -15,6 +15,8 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Models\Listing;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\ListingImage;
+use App\Models\Offer;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -65,4 +67,8 @@ class User extends Authenticatable
         );
     }
    
+    public function offers(): HasMany
+    {
+        return $this->hasMany(App\Models\Offer::class , 'bidder_id');
+    }
 }
