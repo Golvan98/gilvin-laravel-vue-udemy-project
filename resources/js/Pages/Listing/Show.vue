@@ -70,6 +70,10 @@
 </template>
     
     <script setup>
+     import { usePage  } from '@inertiajs/inertia-vue3'
+     import { computed } from 'vue'
+     import { useForm } from '@inertiajs/inertia-vue3'
+     import { Link } from '@inertiajs/inertia-vue3'
      import ListingAddress from '@/Components/ListingAddress.vue'
      import Price from '@/Components/UI/Price.vue'
      import Box from '@/Components/UI/Box.vue'
@@ -78,18 +82,18 @@
      import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
      import MakeOffer from './Show/Components/MakeOffer.vue'
 
+
+
      const interestRate = ref(2.5)
      const duration = ref(25)
 
      const props = defineProps({ 
         listing: Object,
                })
-
+               
                const { monthlyPayment , totalPaid, totalInterest } = useMonthlyPayment(
   props.listing.price, interestRate, duration,
 )
-
-    
-    
-    
+const page = usePage()
+const user = computed(() => page.props.user )
     </script>

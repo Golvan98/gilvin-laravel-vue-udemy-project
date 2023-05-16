@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\RealtorListingController;
 use App\Http\Controllers\RealtorListingImageController;
 use App\Http\Controllers\UserAccountController;
@@ -10,7 +11,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Pagination\Paginator;
 use App\Models\ListingImage;
 use App\Models\Listing;
-
+use App\Models\Offer;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +41,8 @@ Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
 
 Route::resource('user-account', UserAccountController::class)->except('destroy');
 
+Route::resource('listing.offer', ListingOfferController::class)->middleware('auth')->only(['store']);
+
 Route::prefix('realtor')
   ->name('realtor.')
   ->middleware('auth')
@@ -50,4 +55,6 @@ Route::prefix('realtor')
 
   Route::get('/phpinfo', function() {
     phpinfo();
+
+    
 });

@@ -295,3 +295,5 @@ May 14:
 
 May 16:
 - added migrations and model-relationships for Offers Feature
+- added make MakeOffer UI for Listing Offers May 16
+- added working backend part for offermaking, but with an authorization bug, it doesnt show up even when using admin account and errors are not showing
