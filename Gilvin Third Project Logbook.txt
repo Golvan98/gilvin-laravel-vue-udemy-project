@@ -297,3 +297,7 @@ May 16:
 - added migrations and model-relationships for Offers Feature
 - added make MakeOffer UI for Listing Offers May 16
 - added working backend part for offermaking, but with an authorization bug, it doesnt show up even when using admin account and errors are not showing
+
+May 18
+- debugged  the auth not working. added v-if="page.props.user" instead of v-if="user", also replaced with '@inertiajs/inertia-vue3' with '@inertiajs/vue3'
+- I M P O R T A N T N O T E: when u import vue stuff, u import it from '@inertiajs/vue3' NOT '@inertiajs/inertia-vue3'

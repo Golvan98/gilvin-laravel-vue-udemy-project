@@ -62,7 +62,7 @@
             </div>
            
         </Box>
-        <MakeOffer :listing-id="listing.id" :price="listing.price"/>
+        <MakeOffer v-if="page.props.user" :listing-id="listing.id" :price="listing.price"/>
 
       </div>
 
@@ -70,19 +70,22 @@
 </template>
     
     <script setup>
-     import { usePage  } from '@inertiajs/inertia-vue3'
-     import { computed } from 'vue'
-     import { useForm } from '@inertiajs/inertia-vue3'
-     import { Link } from '@inertiajs/inertia-vue3'
-     import ListingAddress from '@/Components/ListingAddress.vue'
-     import Price from '@/Components/UI/Price.vue'
-     import Box from '@/Components/UI/Box.vue'
-     import ListingSpace from '@/Components/UI/ListingSpace.vue'
-     import {ref } from 'vue'
-     import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
-     import MakeOffer from './Show/Components/MakeOffer.vue'
 
+    const page = usePage()
+    const flashSuccess = computed(() => page.props.flash.success,)
+   
 
+    import { computed } from 'vue'
+    import { usePage  } from '@inertiajs/vue3'
+    import { useForm } from '@inertiajs/vue3'
+    import { Link } from '@inertiajs/vue3'
+    import ListingAddress from '@/Components/ListingAddress.vue'
+    import Price from '@/Components/UI/Price.vue'
+    import Box from '@/Components/UI/Box.vue'
+    import ListingSpace from '@/Components/UI/ListingSpace.vue'
+    import {ref } from 'vue'
+    import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
+    import MakeOffer from './Show/Components/MakeOffer.vue'
 
      const interestRate = ref(2.5)
      const duration = ref(25)
@@ -94,6 +97,5 @@
                const { monthlyPayment , totalPaid, totalInterest } = useMonthlyPayment(
   props.listing.price, interestRate, duration,
 )
-const page = usePage()
-const user = computed(() => page.props.user )
+
     </script>

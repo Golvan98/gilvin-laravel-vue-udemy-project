@@ -14,6 +14,7 @@ use App\Models\Listing;
 use App\Models\Offer;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/' , [IndexController::class, 'index']);
 Route::get('/hello' , [IndexController::class, 'show']);
 
-
+Route::resource('listing.offer', ListingOfferController::class)->middleware('auth')->only(['store']);
 Route::resource('listing', ListingController::class)->only(['index', 'show']);
-
 
 
 Route::get('login', [AuthController::class, 'create'])->name('login');
@@ -41,7 +41,7 @@ Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
 
 Route::resource('user-account', UserAccountController::class)->except('destroy');
 
-Route::resource('listing.offer', ListingOfferController::class)->middleware('auth')->only(['store']);
+
 
 Route::prefix('realtor')
   ->name('realtor.')

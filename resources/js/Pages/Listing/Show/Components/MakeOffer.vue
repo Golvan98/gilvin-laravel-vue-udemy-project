@@ -31,15 +31,19 @@ import Box from '@/Components/UI/Box.vue';
 import { useForm , usePage} from '@inertiajs/inertia-vue3';
 import { computed } from 'vue';
 
+
+
 const form = useForm({
     amount: props.price,
 })
 
 const props = defineProps({
     listingId: Number,
-    price: Number
+    price: Number,
+    listing: Object,
 }   
     
+
 )
 
 
