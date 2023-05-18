@@ -62,7 +62,8 @@
             </div>
            
         </Box>
-        <MakeOffer v-if="page.props.user"  @offer-updated="offer = $event" :listing-id="listing.id" :price="listing.price"/>
+        <MakeOffer v-if="page.props.user && !offerMade"  @offer-updated="offer = $event" :listing-id="listing.id" :price="listing.price"/>
+        <OfferMade v-if="page.props.user && offerMade" :offer="offerMade"/>
 
       </div>
 
@@ -74,7 +75,7 @@
     const page = usePage()
     const flashSuccess = computed(() => page.props.flash.success,)
    
-
+    
     import { computed } from 'vue'
     import { usePage  } from '@inertiajs/vue3'
     import { useForm } from '@inertiajs/vue3'
@@ -87,6 +88,7 @@
     import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
     import MakeOffer from './Show/Components/MakeOffer.vue'
     import { debounce } from 'lodash'
+    import OfferMade from './Show/Components/OfferMade.vue'
 
 
      const offer = ref(props.listing.price)
@@ -95,6 +97,7 @@
 
      const props = defineProps({ 
         listing: Object,
+        offerMade: Object,
                })
                
                const { monthlyPayment , totalPaid, totalInterest } = useMonthlyPayment(offer, interestRate, duration,)
