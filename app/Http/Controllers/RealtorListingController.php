@@ -11,6 +11,7 @@ use App\Http\Controllers\AuthController;
 use App\Models\Listing;
 use App\Models\ListingImage;
 use Illuminate\Pagination\Paginator;
+use App\Models\Offer;
 
 class RealtorListingController extends Controller
 {
@@ -29,8 +30,13 @@ class RealtorListingController extends Controller
         
         return inertia('Realtor/Index', [
             'filters' => $filters, 
-            'listings' => Auth::user()->listings()->filter($filters)->withCount('images')->paginate(5)->withQueryString() ]);
+            'listings' => Auth::user()->listings()->filter($filters)->withCount('images')->withCount('offers')->paginate(5)->withQueryString() ]);
         //->mostRecent()
+    }
+
+    public function show(Listing $listing)
+    {
+        return inertia('Realtor/Show', ['listing'=>$listing->load('offers')]);
     }
     
 
