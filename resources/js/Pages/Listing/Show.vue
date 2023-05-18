@@ -62,7 +62,7 @@
             </div>
            
         </Box>
-        <MakeOffer v-if="page.props.user" :listing-id="listing.id" :price="listing.price"/>
+        <MakeOffer v-if="page.props.user"  @offer-updated="offer = $event" :listing-id="listing.id" :price="listing.price"/>
 
       </div>
 
@@ -83,10 +83,13 @@
     import Price from '@/Components/UI/Price.vue'
     import Box from '@/Components/UI/Box.vue'
     import ListingSpace from '@/Components/UI/ListingSpace.vue'
-    import {ref } from 'vue'
+    import { ref } from 'vue'
     import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
     import MakeOffer from './Show/Components/MakeOffer.vue'
+    import { debounce } from 'lodash'
 
+
+     const offer = ref(props.listing.price)
      const interestRate = ref(2.5)
      const duration = ref(25)
 
@@ -94,8 +97,6 @@
         listing: Object,
                })
                
-               const { monthlyPayment , totalPaid, totalInterest } = useMonthlyPayment(
-  props.listing.price, interestRate, duration,
-)
+               const { monthlyPayment , totalPaid, totalInterest } = useMonthlyPayment(offer, interestRate, duration,)
 
     </script>
