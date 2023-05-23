@@ -304,4 +304,6 @@ May 18
 - introduced emit and debounce to price calculator May 18`
 
 May 23
-- 
+- offers list view with conditional !hasoffers
+- NOTE: something about using a kebab-case when passing a prop? Must read Documentation after this course
+
