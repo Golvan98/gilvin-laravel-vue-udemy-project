@@ -306,4 +306,8 @@ May 18
 May 23
 - offers list view with conditional !hasoffers
 - NOTE: something about using a kebab-case when passing a prop? Must read Documentation after this course
-
+- offers list now connected to backend and reflects offer attributes May 23
+- added accept offer button and functioning, except for flash message not appearing, appears to be a bug due to syntax issues again. sigh. May 23
+- added a filter scope in Listing model where it sorts listings that are sold or not using doesntHave() and orWhereHas() function May 23
+- added a 'sold_at' column to listing to simply the filter WithoutSold() function May 23
+- NOTE: "?" in function parameters like public function view(?User $user) indicates that arguement can be null

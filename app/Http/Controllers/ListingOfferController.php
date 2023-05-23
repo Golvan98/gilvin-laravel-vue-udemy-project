@@ -17,6 +17,9 @@ class ListingOfferController extends Controller
 {
     public function store(Listing $listing, Request $request)
     {
+
+        $this->authorize('view' , $listing); // this is taken from Listing Policy where it determines if the user is t he owner of the listing or if the listing is sold then it cant be viewed
+
         $listing->offers()->save(
             Offer::make(
                 $request->validate([
