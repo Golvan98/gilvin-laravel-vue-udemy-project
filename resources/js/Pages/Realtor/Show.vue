@@ -39,4 +39,5 @@ import { computed } from 'vue';
 const props = defineProps ( { listing:Object})
 
 const hasOffers = computed ( () => props.listing.offers.length,)
+const flashSuccess = computed(() => page.props.flash.success,)
 </script>

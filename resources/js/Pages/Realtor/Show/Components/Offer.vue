@@ -12,7 +12,7 @@
               </div>
 
               <div class="text-gray-500 text-sm">
-                Made by John Doe
+                Made by {{ offer.bidder.name }}
               </div>
 
               <div class="text-gray-500 text-sm">
@@ -22,7 +22,14 @@
             </div>
 
             <div>
-              <Link class="btn-outline text-xs font-medium" as="button"> Accept </Link> 
+                <Link
+                    :href="route('offer.accept', { offer: offer.id })"
+                    class="btn-outline text-xs font-medium" 
+                    as="button"
+                    method="put"
+                >
+                Accept
+                </Link>
             </div>
 
         </section>
@@ -48,5 +55,5 @@ const props = defineProps
 const difference = computed ( () => props.offer.amount - props.listingPrice, )
 
 const madeOn = computed ( () => new Date(props.offer.created_at).toDateString())
-
+const flashSuccess = computed(() => page.props.flash.success,)
 </script>
