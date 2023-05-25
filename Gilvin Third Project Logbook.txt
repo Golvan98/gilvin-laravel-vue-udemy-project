@@ -311,3 +311,5 @@ May 23
 - added a filter scope in Listing model where it sorts listings that are sold or not using doesntHave() and orWhereHas() function May 23
 - added a 'sold_at' column to listing to simply the filter WithoutSold() function May 23
 - NOTE: "?" in function parameters like public function view(?User $user) indicates that arguement can be null
+- added restrictions using ListingPolicy settings in Listing and RealtorListingAcceptOffer Controllers to make manipulating data of sold Listings undoable by unauthorized users May 23
+- added UI improvements, sold display now appears if a listing has an accepted offer. Will need to debug flash messages not working though. end May 23 shift
