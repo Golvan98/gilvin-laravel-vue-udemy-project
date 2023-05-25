@@ -313,3 +313,7 @@ May 23
 - NOTE: "?" in function parameters like public function view(?User $user) indicates that arguement can be null
 - added restrictions using ListingPolicy settings in Listing and RealtorListingAcceptOffer Controllers to make manipulating data of sold Listings undoable by unauthorized users May 23
 - added UI improvements, sold display now appears if a listing has an accepted offer. Will need to debug flash messages not working though. end May 23 shift
+
+May 25
+- added notification section and database setup May 25
+- added notification bell UI for notification

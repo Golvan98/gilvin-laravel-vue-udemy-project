@@ -11,12 +11,21 @@
         </div>
 
         <div v-if="user" class="flex items-center gap-4">
+
+          <div class="text-gray-500 relative pr-2 py-2 text-lg">
+            🔔
+            <div class="absolute right-0 top-0 w-5 h-5 bg-red-700 dark:bg-red-400 text-white font-medium border border-white dark:border-gray-900 rounded-full text-xs text-center">
+              {{  notificationCount }}
+            </div>
+          </div>
+
           <div class="text-sm text-gray-500"> {{ user.name }} </div>
           <Link :href="route('realtor.listing.create')" class="primary-btn">+ New Listing</Link>
           <div> <Link :href="route('logout')" method="delete" as="button">  Logout </Link> </div>
         </div>
 
         <div v-else class="flex items-center gap-2"> 
+         
           <Link class="primary-btn" :href="route('user-account.create')"> Register </Link> 
           <Link class="primary-btn" :href="route('login')"> Sign-In </Link> 
         </div>
@@ -42,6 +51,8 @@ const page = usePage()
 const flashSuccess = computed(() => page.props.flash.success,)
 
 const user = computed(() => page.props.user )
+
+const notificationCount = computed ( () => Math.min(page.props.user.notificationCount, 9),)
 </script>
 
 
