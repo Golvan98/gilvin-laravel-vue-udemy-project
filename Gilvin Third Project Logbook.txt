@@ -321,3 +321,7 @@ May 23
 May 25
 - added notification section and database setup May 25
 - added notification bell UI for notification
+- added an empty state component 
+- IMPORTANT NOTE: v-if for paginated objects are called thru ||  v-if="objectname.data.length" ||
+- added front end and backend part for notification list.
+- IMPORTANT NOTE: when passing data from controller to inertia vue, u call them using define Props: object/array
