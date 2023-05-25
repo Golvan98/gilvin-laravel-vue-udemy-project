@@ -325,3 +325,6 @@ May 25
 - IMPORTANT NOTE: v-if for paginated objects are called thru ||  v-if="objectname.data.length" ||
 - added front end and backend part for notification list.
 - IMPORTANT NOTE: when passing data from controller to inertia vue, u call them using define Props: object/array
+- IMPORTANT NOTE: single action controllers are formatted by 1 function which is public function __invoke()
+- completed backend part for marking notifications as read, underlying issue in which the page somehow doesnt refresh after submitting a button persists, maybe it is why flash messages do not occur sometimes
+and the v-else conditional UIs do not load after logging out/registering

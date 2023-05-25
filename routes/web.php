@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\NotificationSeenController;
 use App\Http\Controllers\RealtorListingAcceptOfferController;
 use App\Http\Controllers\RealtorListingController;
 use App\Http\Controllers\RealtorListingImageController;
@@ -17,6 +18,7 @@ use App\Models\Offer;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
+use Illuminate\Notifications\Events\NotificationSent;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +30,10 @@ use App\Http\Middleware\Authenticate;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::put(
+  'notification/{notification}/seen',
+  NotificationSeenController::class
+)->middleware('auth')->name('notification.seen');
 
 Route::get('/' , [IndexController::class, 'index']);
 Route::get('/hello' , [IndexController::class, 'show']);
