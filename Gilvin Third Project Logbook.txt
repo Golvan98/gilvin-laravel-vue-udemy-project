@@ -260,6 +260,10 @@ and origin of import is '@inertiajs/vue3' , not '@inertia/inertia'
 - added debounce feature
 - added a filter feature for deleted listings using softdeletequery "withTrashed()"
 - added backend part for filtering by attributes and setting constraints on which parts can be sorted
+BUGS FOUND AND NEED TO Keep an eye ON NEXT PROJECTS
+- Delete filter not working
+- Flashmessage inconsistently not working
+
 
 May 8:
 - added filter, code copied associated frontend-backend, must review both backend and frontend May 8
