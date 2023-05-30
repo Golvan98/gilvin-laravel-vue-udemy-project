@@ -19,6 +19,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Notifications\Events\NotificationSent;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Auth\Events\Registered;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +49,14 @@ Route::resource('notification', NotificationController::class)->middleware('auth
 Route::get('/email/verify', function() {
   return inertia('Auth/VerifyEmail');
 })->middleware('auth')->name('verification.notice');
+
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+  $request->fulfill();
+
+  return redirect()->route('listing.index')->with('success', 'Email was verified!');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
 
 
 Route::get('login', [AuthController::class, 'create'])->name('login');

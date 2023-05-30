@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
+
+use App\Http\Controllers\Register;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+
 
 class UserAccountController extends Controller
 {
@@ -28,7 +32,7 @@ class UserAccountController extends Controller
 
 
         Auth::login($user);
-        event(new Register($user));
+        event(new Registered($user));
 
         
 

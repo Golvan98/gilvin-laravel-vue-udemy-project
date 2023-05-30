@@ -336,3 +336,5 @@ May 30
 - setup server for mailhog
 - configured email sender
 - configured events to send email verification to unverified users and event notification sender upon register
+- added a page redirector and middleware for unverified users may 30
+- IMPORTANT NOTE: ur domain name for mailhog is http://127.0.0.1:8025/# instead of 0.0.0.0:8025
