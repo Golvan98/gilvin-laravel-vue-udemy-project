@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
@@ -21,6 +22,7 @@ use App\Http\Middleware\Authenticate;
 use Illuminate\Notifications\Events\NotificationSent;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Auth\Events\Registered;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +58,12 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
   return redirect()->route('listing.index')->with('success', 'Email was verified!');
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('/email/verification-notification', function (Request $request) {
+  $request->user()->sendEmailVerificationNotification();
+
+  return back()->with('success', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
 
