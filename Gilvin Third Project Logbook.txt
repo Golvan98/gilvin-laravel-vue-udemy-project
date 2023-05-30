@@ -331,3 +331,8 @@ and the v-else conditional UIs do not load after logging out/registering
 - getting close now, Grats Gilvs! "GeT DaT ThirtY Br0"
 - IMPORTANT NOTE: there are two type of comparison operators, operator == compares if the values are identical regardless of data type like '2' and 2 = true, but === operator STRICTLY CHECKS DATA Type, so '2' ==== 2 is FALSE.`
 - finished a small java script course from Piotr
+
+May 30
+- setup server for mailhog
+- configured email sender
+- configured events to send email verification to unverified users and event notification sender upon register
