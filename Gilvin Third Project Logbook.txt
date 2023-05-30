@@ -328,3 +328,6 @@ May 25
 - IMPORTANT NOTE: single action controllers are formatted by 1 function which is public function __invoke()
 - completed backend part for marking notifications as read, underlying issue in which the page somehow doesnt refresh after submitting a button persists, maybe it is why flash messages do not occur sometimes
 and the v-else conditional UIs do not load after logging out/registering
+- getting close now, Grats Gilvs! "GeT DaT ThirtY Br0"
+- IMPORTANT NOTE: there are two type of comparison operators, operator == compares if the values are identical regardless of data type like '2' and 2 = true, but === operator STRICTLY CHECKS DATA Type, so '2' ==== 2 is FALSE.`
+- finished a small java script course from Piotr
