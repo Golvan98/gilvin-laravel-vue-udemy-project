@@ -28,6 +28,7 @@ class UserAccountController extends Controller
 
 
         Auth::login($user);
+        event(new Register($user));
 
         
 
